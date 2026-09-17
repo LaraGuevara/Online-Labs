@@ -53,6 +53,7 @@ public class BubbleSort : MonoBehaviour
             if(!changed && !sortThread.IsAlive)
             {
                 heightsDirty = false;
+                sortThread.Abort();
                 Debug.Log("[SORT] Sorting finished, heights no longer updated.");
             }
         }
